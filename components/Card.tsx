@@ -2,10 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 type Props = {
-  src: string,
-  title: string,
-  text: string,
-  href: string,
+  src: string
+  title: string
+  text: string
+  href: string
 }
 
 export default function Card({ src, title, text, href }: Props) {

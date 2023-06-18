@@ -1,8 +1,8 @@
 import ButtonBack from '@/components/ButtonBack'
 
 type Props = {
-  text: string,
-  href: string,
+  text: string
+  href?: string
 }
 
 export default function Title({ text, href }: Props) {

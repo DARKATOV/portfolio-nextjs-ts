@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image';
 
 type Props = {
-  href: string
+  href?: string
 }
 
 export default function ButtonBack({ href }: Props) {
