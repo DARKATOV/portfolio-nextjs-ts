@@ -1,10 +1,11 @@
 import { NextApiResponse, NextApiRequest } from 'next'
 import dbConnect from '@/lib/dbConnect'
-import Product from '@/models/Product'
+import ProductSchema from '@/models/Product'
+import type { Product, ResponseError } from '@/interfaces'
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse<Product[] | Product | ResponseError>
 ) {
   const { method } = req
 
@@ -13,22 +14,22 @@ export default async function handler(
   switch (method) {
     case 'GET':
       try {
-        const products = await Product.find({})
-        res.status(200).json({ success: true, data: products })
+        const products = await ProductSchema.find({})
+        res.status(200).json(products)
       } catch (error) {
-        res.status(400).json({ success: false })
+        res.status(400).json({ message: 'Error al obtener productos.' })
       }
       break
     case 'POST':
       try {
-        const product = await Product.create(req.body)
-        res.status(201).json({ success: true, data: product })
+        const product = await ProductSchema.create(req.body)
+        res.status(201).json(product)
       } catch (error) {
-        res.status(400).json({ success: false })
+        res.status(400).json({ message: 'Error al crear producto.' })
       }
       break
     default:
-      res.status(400).json({ success: false })
+      res.status(400).json({ message: 'Método no válido.' })
       break
   }
 }

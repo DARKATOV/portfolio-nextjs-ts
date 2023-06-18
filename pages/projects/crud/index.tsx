@@ -4,17 +4,10 @@ import Title from '@/components/Title'
 import styles from '@/styles.module.css'
 import type { Product } from '@/interfaces'
 
-const fetcher = (url: string) =>
-  fetch(url)
-    .then((res) => res.json())
-    .then((json) => json.data)
+const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
 export default function CRUD() {
-  const {
-    data: products,
-    error,
-    isLoading,
-  } = useSWR<Product[]>(`/api/products`, fetcher)
+  const { data, error, isLoading } = useSWR<Product[]>(`/api/products`, fetcher)
 
   if (error) return (
     <main className="container">
@@ -32,7 +25,7 @@ export default function CRUD() {
     </main>
   )
 
-  if (!products) return (
+  if (!data) return (
     <main className="container">
       <Title text="CRUD" href="/projects" />
 
@@ -53,7 +46,7 @@ export default function CRUD() {
           </tr>
         </thead>
         <tbody>
-          {products.map((product) => (
+          {data.map((product) => (
             <tr key={product._id}>
               <td>{product.name}</td>
               <td>{product.price}</td>
