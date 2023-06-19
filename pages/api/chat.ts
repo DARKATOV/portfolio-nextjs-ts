@@ -11,7 +11,7 @@ if (!OPENAI_API_KEY) {
 }
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: OPENAI_API_KEY,
 })
 
 const openai = new OpenAIApi(configuration)
@@ -29,11 +29,8 @@ export default async function handler(
     res.status(200).json(chatCompletion.data.choices[0].message)
   } catch (error: any) {
     if (error.response) {
-      console.log(error.response.status)
-      console.log(error.response.data)
       res.status(400).json({message: error.response.data})
     } else {
-      console.log(error.message)
       res.status(400).json({message: error.message})
     }
   }
