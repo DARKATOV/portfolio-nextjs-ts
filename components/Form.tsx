@@ -34,10 +34,13 @@ export default function Form({ formId, productForm, forNewProduct = true }: Prop
         body: JSON.stringify(form),
       })
 
-      const { data } = await res.json()
-
-      mutate(`/api/products/${id}`, data, false)
-      router.push('/projects/crud')
+      if (res.ok) {
+        const { data } = await res.json()
+        mutate(`/api/products/${id}`, data, false)
+        router.push('/projects/crud')
+      } else {
+        console.log(await res.json())
+      }
     } catch (error) {
       setMessage('Error al actualizar producto')
     }
@@ -45,7 +48,7 @@ export default function Form({ formId, productForm, forNewProduct = true }: Prop
 
   const postData = async (form: any) => {
     try {
-      await fetch('/api/products', {
+      const res = await fetch('/api/products', {
         method: 'POST',
         headers: {
           Accept: contentType,
@@ -54,7 +57,11 @@ export default function Form({ formId, productForm, forNewProduct = true }: Prop
         body: JSON.stringify(form),
       })
 
-      router.push('/projects/crud')
+      if (res.ok) {
+        router.push('/projects/crud')
+      } else {
+        console.log(await res.json())
+      }
     } catch (error) {
       setMessage('Error al crear producto')
     }
