@@ -45,7 +45,7 @@ export default function Form({ formId, productForm, forNewProduct = true }: Prop
 
   const postData = async (form: any) => {
     try {
-      const res = await fetch('/api/products', {
+      await fetch('/api/products', {
         method: 'POST',
         headers: {
           Accept: contentType,
