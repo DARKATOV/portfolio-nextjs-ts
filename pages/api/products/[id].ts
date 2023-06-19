@@ -42,11 +42,11 @@ export default async function handler(
       break
     case 'DELETE':
       try {
-        const deletedProduct = await ProductSchema.deleteOne({ _id: id })
+        const deletedProduct = await ProductSchema.findByIdAndDelete(id)
         if (!deletedProduct) {
           return res.status(400).json({ message: 'El producto no existe.' })
         }
-        res.status(200).json({ message: 'Producto eliminado con éxito.' })
+        res.status(200).json(deletedProduct)
       } catch (error) {
         res.status(400).json({ message: 'Error al eliminar producto.' })
       }
