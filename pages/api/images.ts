@@ -1,4 +1,4 @@
-import { Message, ResponseError } from '@/interfaces'
+import { MessageImage, ResponseError } from '@/interfaces'
 import { NextApiResponse, NextApiRequest } from 'next'
 import { Configuration, OpenAIApi } from 'openai'
 
@@ -18,15 +18,14 @@ const openai = new OpenAIApi(configuration)
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Message | ResponseError>
+  res: NextApiResponse<MessageImage | ResponseError>
 ) {
   try {
-    const chatCompletion: any = await openai.createChatCompletion({
-      model: 'gpt-3.5-turbo',
-      messages: [{role: 'user', content: req.body.prompt}],
+    const response = await openai.createImage({
+      prompt: req.body.prompt,
     })
 
-    res.status(200).json(chatCompletion.data.choices[0].message)
+    res.status(200).json(response.data.data[0])
   } catch (error: any) {
     if (error.response) {
       res.status(400).json({message: error.response.data})

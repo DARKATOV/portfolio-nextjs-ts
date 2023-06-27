@@ -3,12 +3,9 @@ import Title from '@/components/Title'
 import { Message } from '@/interfaces'
 
 type Data = {
-  id: number
   prompt: string
   message: Message
 }
-
-let messageId = 0
 
 export default function Chat() {
   const contentType = 'application/json'
@@ -35,7 +32,7 @@ export default function Chat() {
 
       const message = await res.json()
       setData([
-        { id: messageId++, prompt: prompt, message: message },
+        { prompt: prompt, message: message },
         ...data,
       ])
       setPrompt("")
@@ -68,18 +65,18 @@ export default function Chat() {
         </div>
       </form>
 
-      {data.map(d => (
-        <div className="mb-3" key={d.id}>
+      {data.map((item, index) => (
+        <div className="mb-3" key={index}>
           <textarea
             className="form-control mb-2"
-            value={d.prompt}
+            value={item.prompt}
             rows={2}
             readOnly>
           </textarea>
 
           <textarea
             className="form-control"
-            value={d.message.content}
+            value={item.message.content}
             rows={5}
             readOnly>
           </textarea>

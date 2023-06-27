@@ -9,6 +9,10 @@ export type Message = {
   content: string
 }
 
+export type MessageImage = {
+  url?: string
+}
+
 export type ResponseError = {
   message: string
 }
