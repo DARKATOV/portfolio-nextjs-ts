@@ -6,7 +6,7 @@ const OPENAI_API_KEY = process.env.OPENAI_API_KEY
 
 if (!OPENAI_API_KEY) {
   throw new Error(
-    'Por favor declara la variable de entorno OPENAI_API_KEY en .env.local'
+    'Por favor declara la variable de entorno OPENAI_API_KEY en .env'
   )
 }
 

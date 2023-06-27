@@ -4,7 +4,7 @@ const MONGODB_URI = process.env.MONGODB_URI
 
 if (!MONGODB_URI) {
   throw new Error(
-    'Por favor declara la variable de entorno MONGODB_URI en .env.local'
+    'Por favor declara la variable de entorno MONGODB_URI en .env'
   )
 }
 
