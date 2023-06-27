@@ -34,13 +34,13 @@ export default function Form({ formId, productForm, forNewProduct = true }: Prop
         body: JSON.stringify(form),
       })
 
-      if (res.ok) {
-        const { data } = await res.json()
-        mutate(`/api/products/${id}`, data, false)
-        router.push('/projects/crud')
-      } else {
-        console.log(await res.json())
+      if (!res.ok) {
+        throw new Error('Error al actualizar producto')
       }
+
+      const { data } = await res.json()
+      mutate(`/api/products/${id}`, data, false)
+      router.push('/projects/crud')
     } catch (error) {
       setMessage('Error al actualizar producto')
     }
@@ -57,11 +57,11 @@ export default function Form({ formId, productForm, forNewProduct = true }: Prop
         body: JSON.stringify(form),
       })
 
-      if (res.ok) {
-        router.push('/projects/crud')
-      } else {
-        console.log(await res.json())
+      if (!res.ok) {
+        throw new Error('Error al crear producto')
       }
+
+      router.push('/projects/crud')
     } catch (error) {
       setMessage('Error al crear producto')
     }

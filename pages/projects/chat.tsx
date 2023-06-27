@@ -29,16 +29,16 @@ export default function Chat() {
         body: JSON.stringify({ prompt: prompt })
       })
 
-      if (res.ok) {
-        const message = await res.json()
-        setData([
-          { id: messageId++, prompt: prompt, message: message },
-          ...data,
-        ])
-        setPrompt("")
-      } else {
-        console.log(await res.json())
+      if (!res.ok) {
+        throw new Error('Error al enviar mensaje')
       }
+
+      const message = await res.json()
+      setData([
+        { id: messageId++, prompt: prompt, message: message },
+        ...data,
+      ])
+      setPrompt("")
     } catch (error) {
       console.log(error)
     }
