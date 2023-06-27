@@ -105,7 +105,7 @@ export default function Form({ formId, productForm, forNewProduct = true }: Prop
           <input
             type="text"
             className="form-control"
-            maxLength={20}
+            maxLength={50}
             id="name"
             name="name"
             value={form.name}
