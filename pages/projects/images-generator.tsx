@@ -55,6 +55,7 @@ export default function ImagesGenerator() {
             value={prompt}
             maxLength={1000}
             onChange={(e) => setPrompt(e.target.value)}
+            placeholder="Describe la imagen que quieres generar"
             rows={3}
             required>
           </textarea>

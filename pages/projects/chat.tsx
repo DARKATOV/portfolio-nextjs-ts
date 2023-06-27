@@ -52,6 +52,7 @@ export default function Chat() {
             className="form-control"
             value={prompt}
             onChange={e => setPrompt(e.target.value)}
+            placeholder="Escribe un mensaje"
             maxLength={100}
             rows={3}
             required>
