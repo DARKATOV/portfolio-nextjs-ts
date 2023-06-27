@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import styles from '@/styles.module.css'
 
 type Props = {
   src: string
@@ -15,9 +16,9 @@ export default function Card({ src, title, text, href }: Props) {
         <Image
           src={src}
           alt={title}
-          className="card-img-top"
-          width={90}
-          height={200}
+          className={`card-img-top ${styles.imageCard}`}
+          width={400}
+          height={400}
           priority
         />
         <div className="card-body">

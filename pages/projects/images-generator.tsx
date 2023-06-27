@@ -1,6 +1,8 @@
 import Title from '@/components/Title'
 import { MessageImage } from '@/interfaces'
+import Image from 'next/image'
 import { useState } from 'react'
+import styles from '@/styles.module.css'
 
 type Data = {
   prompt: string
@@ -77,11 +79,13 @@ export default function ImagesGenerator() {
           </div>
 
           <div className="col-lg-6">
-            <img
-              src={item.image.url}
-              alt="Generator"
-              width="100%"
-              className="card-img-top"
+            <Image
+              src={item.image.url!}
+              alt={`imagen${index}`}
+              className={styles.imageAI}
+              width={1024}
+              height={1024}
+              priority
             />
           </div>
         </div>
