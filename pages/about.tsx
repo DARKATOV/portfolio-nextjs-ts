@@ -6,10 +6,7 @@ export default function About() {
       <h4>FLORENTINO JOSE CARRERA GASPAR</h4>
 
       <p className={styles.paragraph}>
-        Santiago de Compostela, España | +34 624429291
-      </p>
-      <p className={styles.paragraph}>
-        florentinocarrera44@gmail.com
+        Santiago de Compostela, España | florentinocarrera44@gmail.com
         | <a
             href="https://github.com/tinocarrera"
             target="_blank"
