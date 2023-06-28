@@ -1,11 +1,9 @@
-import styles from '@/styles/App.module.css'
-
 export default function About() {
   return (
-    <main className={`container ${styles.containerCustom}`}>
+    <main className="container container-custom">
       <h4>FLORENTINO JOSE CARRERA GASPAR</h4>
 
-      <p className={styles.paragraph}>
+      <p>
         Santiago de Compostela, España | florentinocarrera44@gmail.com
         | <a
             href="https://github.com/tinocarrera"
@@ -18,21 +16,21 @@ export default function About() {
 
       <hr />
 
-      <p className={styles.paragraph}>
+      <p className="mb-0">
         Conocimiento sólido en desarrollo frontend con <b>JavaScript</b>,
         <b>HTML</b>, y <b>CSS</b>.
       </p>
-      <p className={styles.paragraph}>
+      <p className="mb-0">
         Experiencia en desarrollo web y móvil con <b>React</b>, <b>Angular</b>
         y <b>Flutter</b>.
       </p>
-      <p className={styles.paragraph}>
+      <p className="mb-0">
         Experiencia en desarrollos multifuncionales con <b>Python</b>.
       </p>
-      <p className={styles.paragraph}>
+      <p className="mb-0">
         Entendimiento de los principios de diseño, UI/UX y diseño responsive.
       </p>
-      <p className={styles.paragraph}>
+      <p>
         Actitud positiva y buena ética de trabajo, en busca de buenos resultados,
         manteniendo un enfoque en el rendimiento y calidad del código.
       </p>
@@ -40,7 +38,7 @@ export default function About() {
       <hr />
 
       <b>DESARROLLADOR WEB</b>
-      <p className={styles.paragraph}>
+      <p className="mb-0">
         KreaciaLabs | Puebla, México | Teletrabajo | 2023 - Actualidad
       </p>
       <p>
@@ -49,7 +47,7 @@ export default function About() {
       </p>
 
       <b>DESARROLLADOR FULL STACK</b>
-      <p className={styles.paragraph}>
+      <p className="mb-0">
         ProOil de México | Veracruz, México | Teletrabajo | 2022 - Actualidad
       </p>
       <p>
@@ -58,7 +56,7 @@ export default function About() {
       </p>
 
       <b>DESARROLLADOR WEB</b>
-      <p className={styles.paragraph}>
+      <p className="mb-0">
         ACALconecta | Caracas, Venezuela | Teletrabajo | 2021 - 2022
       </p>
       <p>
@@ -67,10 +65,10 @@ export default function About() {
       </p>
 
       <b>TÉCNICO EN ELECTRÓNICA</b>
-      <p className={styles.paragraph}>
+      <p className="mb-0">
         Corporación Paytech C.A. | Caracas, Venezuela | Presencial | 2020 - 2022
       </p>
-      <p className={styles.paragraph}>
+      <p>
         Diseño, ensamblaje, programación e instalación de dispositivos
         electrónicos, utilizando Python como lenguaje de programación.
       </p>
@@ -78,18 +76,17 @@ export default function About() {
       <hr />
 
       <b>EDUCACIÓN</b>
-      <p className={styles.paragraph}>
+      <p className="mb-0">
         Técnico Superior Universitario en Tecnología Electrónica
       </p>
-      <p className={styles.paragraph}>
-        Universidad Simón Bolívar | Vargas, Venezuela | 2021
-      </p>
+      <p>Universidad Simón Bolívar | Vargas, Venezuela | 2021</p>
 
       <hr />
 
       <b>PROYECTOS EN PARALELO</b>
       <p>
-        Desarrollador voluntario de un dispositivo médico para medir hemoglobina, utilizando un System on a Chip (SoC) ESP32 y Python como lenguaje.
+        Desarrollador voluntario de un dispositivo médico para medir hemoglobina,
+        utilizando un System on a Chip (SoC) ESP32 y Python como lenguaje.
       </p>
     </main>
   )

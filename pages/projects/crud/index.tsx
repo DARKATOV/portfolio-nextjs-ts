@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import useSWR from 'swr'
 import Title from '@/components/Title'
-import styles from '@/styles/App.module.css'
 import type { Product } from '@/interfaces'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
@@ -21,7 +20,7 @@ export default function CRUD() {
     <main className="container">
       <Title text="CRUD" href="/projects" />
 
-      <div className={styles.loader}></div>
+      <div className="loader"></div>
     </main>
   )
 

@@ -4,7 +4,6 @@ import { Product, ResponseError } from '@/interfaces'
 import Link from 'next/link'
 import useSWR from 'swr'
 import Title from '@/components/Title'
-import styles from '@/styles/App.module.css'
 
 const fetcher = async (url: string) => {
   const res = await fetch(url)
@@ -49,7 +48,7 @@ export default function ProductPage() {
     <main className="container">
       <Title text="Producto" href="/projects/crud" />
 
-      <div className={styles.loader}></div>
+      <div className="loader"></div>
     </main>
   )
 

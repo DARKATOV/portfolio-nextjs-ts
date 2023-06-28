@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
 import Form from '@/components/Form'
-import styles from '@/styles/App.module.css'
 import Title from '@/components/Title'
 import { Product, ResponseError } from '@/interfaces'
 
@@ -36,7 +35,7 @@ export default function EditProduct() {
     <main className="container">
       <Title text="Editar producto" />
 
-      <div className={styles.loader}></div>
+      <div className="loader"></div>
     </main>
   )
 

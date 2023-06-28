@@ -2,7 +2,6 @@ import Title from '@/components/Title'
 import { MessageImage } from '@/interfaces'
 import Image from 'next/image'
 import { useState } from 'react'
-import styles from '@/styles/App.module.css'
 
 type Data = {
   prompt: string
@@ -83,7 +82,7 @@ export default function ImagesGenerator() {
             <Image
               src={item.image.url!}
               alt={`imagen${index}`}
-              className={styles.imageAI}
+              className="image-ai"
               width={1024}
               height={1024}
               priority
