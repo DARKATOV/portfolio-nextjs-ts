@@ -10,8 +10,8 @@ export function Navigation({ href, children}: Props) {
   const pathname = usePathname()
   let isActive: boolean
 
-  if (href === "/") {
-    isActive = pathname.endsWith(href)
+  if (href === '/') {
+    isActive = pathname.endsWith('/')
   } else {
     isActive = pathname.includes(href)
   }
