@@ -9,7 +9,7 @@ export default function About() {
         Santiago de Compostela, España | +34 624429291
       </p>
       <p className={styles.paragraph}>
-        florentinocarrera44@gmail.com | <a href="https://github.com/tinocarrera">https://github.com/tinocarrera</a> 
+        florentinocarrera44@gmail.com | <a href="https://github.com/tinocarrera">https://github.com/tinocarrera</a>
       </p>
 
       <hr />
