@@ -24,3 +24,13 @@
   width: 100%;
   height: auto;
 }
+
+.paragraph {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1400px) {
+  .containerCustom {
+    max-width: 900px;
+  }
+}
