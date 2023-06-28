@@ -4,8 +4,10 @@ export default function About() {
       <h4>FLORENTINO JOSE CARRERA GASPAR</h4>
 
       <p>
-        Santiago de Compostela, España | florentinocarrera44@gmail.com
-        | <a
+        Santiago de Compostela, España
+        | <a href="mailto:florentinocarrera44@gmail.com">
+            florentinocarrera44@gmail.com
+          </a> | <a
             href="https://github.com/tinocarrera"
             target="_blank"
             rel="noopener noreferrer"
