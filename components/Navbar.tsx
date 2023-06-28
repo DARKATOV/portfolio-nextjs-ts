@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Navigation } from '@/components/Navigation'
 
 export default function Navbar() {
   return (
@@ -18,15 +19,15 @@ export default function Navbar() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link className="nav-link" href="/">INICIO</Link>
+          <ul className="nav nav-pills ms-auto mb-2 mb-lg-0">
+            <li className="nav-item me-4">
+              <Navigation href="/">INICIO</Navigation>
+            </li>
+            <li className="nav-item me-4">
+              <Navigation href="/projects">PROYECTOS</Navigation>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="/projects">PROYECTOS</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/about">ACERCA DE</Link>
+              <Navigation href="/about">ACERCA DE</Navigation>
             </li>
           </ul>
         </div>
