@@ -1,4 +1,4 @@
-import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 type Props = {
@@ -7,13 +7,13 @@ type Props = {
 }
 
 export function Navigation({ href, children}: Props) {
-  const pathname = usePathname()
+  const router = useRouter()
   let isActive: boolean
 
   if (href === '/') {
-    isActive = pathname.endsWith('/')
+    isActive = router.asPath === '/'
   } else {
-    isActive = pathname.includes(href)
+    isActive = router.asPath.includes(href)
   }
 
   return (
