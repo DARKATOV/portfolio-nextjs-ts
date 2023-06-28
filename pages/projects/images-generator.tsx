@@ -2,7 +2,7 @@ import Title from '@/components/Title'
 import { MessageImage } from '@/interfaces'
 import Image from 'next/image'
 import { useState } from 'react'
-import styles from '@/styles.module.css'
+import styles from '@/styles/App.module.css'
 
 type Data = {
   prompt: string

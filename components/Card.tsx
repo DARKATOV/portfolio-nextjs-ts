@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from '@/styles.module.css'
+import styles from '@/styles/App.module.css'
 
 type Props = {
   src: string

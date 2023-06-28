@@ -4,7 +4,7 @@ import { Product, ResponseError } from '@/interfaces'
 import Link from 'next/link'
 import useSWR from 'swr'
 import Title from '@/components/Title'
-import styles from '@/styles.module.css'
+import styles from '@/styles/App.module.css'
 
 const fetcher = async (url: string) => {
   const res = await fetch(url)

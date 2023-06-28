@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import useSWR from 'swr'
 import Title from '@/components/Title'
-import styles from '@/styles.module.css'
+import styles from '@/styles/App.module.css'
 import type { Product } from '@/interfaces'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())

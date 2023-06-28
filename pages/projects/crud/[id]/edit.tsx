@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
 import Form from '@/components/Form'
-import styles from '@/styles.module.css'
+import styles from '@/styles/App.module.css'
 import Title from '@/components/Title'
 import { Product, ResponseError } from '@/interfaces'
 
