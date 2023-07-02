@@ -43,3 +43,7 @@ a {
 .nav-link, .nav-link:hover {
   color: black;
 }
+
+main {
+  min-height: calc(100vh - 56px - 64px);
+}
