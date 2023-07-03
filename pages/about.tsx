@@ -1,6 +1,8 @@
 export default function About() {
   return (
-    <main className="container container-custom">
+    <main className="container">
+      <h2 className="mb-4">Acerca de mí</h2>
+
       <h4>FLORENTINO JOSE CARRERA GASPAR</h4>
 
       <p>
@@ -19,12 +21,12 @@ export default function About() {
       <hr />
 
       <p className="mb-0">
-        Conocimiento sólido en desarrollo frontend con <b>JavaScript</b>,
-        <b>HTML</b>, y <b>CSS</b>.
+        Conocimiento sólido en desarrollo frontend con <b>JavaScript</b>
+        , <b>HTML</b>, y <b>CSS</b>.
       </p>
       <p className="mb-0">
-        Experiencia en desarrollo web y móvil con <b>React</b>, <b>Angular</b>
-        y <b>Flutter</b>.
+        Experiencia en desarrollo web y móvil con <b>React</b>
+        , <b>Angular</b> y <b>Flutter</b>.
       </p>
       <p className="mb-0">
         Experiencia en desarrollos multifuncionales con <b>Python</b>.

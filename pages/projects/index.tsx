@@ -3,7 +3,7 @@ import Card from '@/components/Card'
 export default function Projects() {
   return (
     <main className="container">
-      <h2>Proyectos</h2>
+      <h2 className="mb-4">Proyectos</h2>
 
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {projects.map((project, index) => (
