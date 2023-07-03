@@ -53,7 +53,7 @@ export default function Chat() {
             value={prompt}
             onChange={e => setPrompt(e.target.value)}
             placeholder="Escribe un mensaje"
-            maxLength={100}
+            maxLength={1000}
             rows={3}
             required>
           </textarea>
