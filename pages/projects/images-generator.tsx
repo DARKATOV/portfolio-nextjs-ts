@@ -61,7 +61,7 @@ export default function ImagesGenerator() {
         </div>
         <div className="mb-3">
           {isLoading ? (<p>Cargando...</p>) :
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-dark">
               Enviar
             </button>}
         </div>
