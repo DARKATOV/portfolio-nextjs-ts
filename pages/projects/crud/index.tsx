@@ -48,7 +48,7 @@ export default function CRUD() {
           {data.map((product) => (
             <tr key={product._id}>
               <td>{product.name}</td>
-              <td>{product.price}</td>
+              <td>{product.price} €</td>
               <td>
                 <Link
                   href={`/projects/crud/${product._id}`}

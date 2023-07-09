@@ -78,15 +78,18 @@ export default function ProductPage() {
 
         <div className="mb-3">
           <label htmlFor="price" className="form-label">Precio</label>
-          <input
-            id="price"
-            type="number"
-            className="form-control"
-            value={product.price}
-            disabled
-            readOnly
-            autoComplete={'off'}
-          />
+          <div className="input-group">
+            <span className="input-group-text">€</span>
+            <input
+              id="price"
+              type="number"
+              className="form-control"
+              value={product.price}
+              disabled
+              readOnly
+              autoComplete={'off'}
+            />
+          </div>
         </div>
 
         <Link

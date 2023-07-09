@@ -117,16 +117,19 @@ export default function Form({ formId, productForm, forNewProduct = true }: Prop
 
         <div className="mb-3">
           <label htmlFor="price" className="form-label">Precio</label>
-          <input
-            type="number"
-            className="form-control"
-            id="price"
-            name="price"
-            value={form.price}
-            onChange={handleChange}
-            required
-            autoComplete={'off'}
-          />
+          <div className="input-group">
+            <span className="input-group-text">€</span>
+            <input
+              type="number"
+              className="form-control"
+              id="price"
+              name="price"
+              value={form.price}
+              onChange={handleChange}
+              required
+              autoComplete={'off'}
+            />
+          </div>
         </div>
 
         <button
