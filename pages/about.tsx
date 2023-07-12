@@ -47,7 +47,9 @@ export default function About() {
       </p>
       <p>
         Desarrollo y mantenimiento de web administrativa, construida con
-        Angular, trabajando con los lenguajes TypeScript, HTML y CSS.
+        Angular, trabajando con los lenguajes TypeScript, HTML y CSS. <br /> E
+        implementación de funcionalidades Web Scraping con Django en el lenguaje
+        Python.
       </p>
 
       <b>DESARROLLADOR FULL STACK</b>
