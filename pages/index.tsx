@@ -1,16 +1,20 @@
+import Link from 'next/link'
+
 export default function Home() {
   return (
     <main className="container">
-      <h2 className="mb-4">Hola visitante</h2>
+      <h2 className="mb-4">Bienvenido(a)</h2>
 
-      <p className="mb-0">Este es un portafolio desarrollado con la tecnología de <b>Next.js</b>.</p>
+      <div className="w-50">
+        <p>Gracias por tomarte unos minutos de tu tiempo para visitar mi portafolio web.</p>
 
-      <p>
-        <b>Next.js</b> es un framework que permite crear aplicaciones web
-        full-stack mediante el uso de los últimos features de <b>React</b>.
-      </p>
+        <p>Este es un desarrollo realizado con la tecnología de <b>Next.js</b>,
+          el cual es un framework que permite crear aplicaciones web
+          full-stack mediante el uso de los últimos features de <b>React</b>.
+        </p>
 
-      <p>Visita la pantalla de <b>Proyectos</b> para explorar más por esta web.</p>
+        <p>Visita la pantalla de <b><Link href="/projects">Proyectos</Link></b> para explorar más por esta web.</p>
+      </div>
     </main>
   )
 }
