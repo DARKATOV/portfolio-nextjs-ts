@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { mutate } from 'swr'
 import { Product } from '@/interfaces'
 import Title from '@/components/Title'
+import { toast } from 'react-toastify';
 
 type Props = {
   formId: string
@@ -40,6 +41,7 @@ export default function Form({ formId, productForm, forNewProduct = true }: Prop
 
       const { data } = await res.json()
       mutate(`/api/products/${id}`, data, false)
+      toast.success('Producto modificado con éxito!')
       router.push('/projects/crud')
     } catch (error) {
       setMessage('Error al actualizar producto')
@@ -61,6 +63,7 @@ export default function Form({ formId, productForm, forNewProduct = true }: Prop
         throw new Error('Error al crear producto')
       }
 
+      toast.success('Producto creado con éxito!')
       router.push('/projects/crud')
     } catch (error) {
       setMessage('Error al crear producto')

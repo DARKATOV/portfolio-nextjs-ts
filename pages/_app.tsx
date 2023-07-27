@@ -4,6 +4,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Head from 'next/head'
 import Script from 'next/script'
+import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer } from 'react-toastify'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -22,6 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossOrigin="anonymous"
       />
+      <ToastContainer autoClose={2000} hideProgressBar />
     </>
   )
 }
