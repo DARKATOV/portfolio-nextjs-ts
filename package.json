@@ -2,7 +2,7 @@
   "name": "portfolio-nextjs-ts",
   "version": "1.2.2",
   "private": true,
-  "homepage": "tinocarrera.github.io/portfolio-nextjs-ts",
+  "homepage": "darkatov.github.io/portfolio-nextjs-ts",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
